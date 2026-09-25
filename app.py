@@ -1047,7 +1047,7 @@ if "selected_content_id" in st.session_state:
 
         watch_link = watch_data.get("link")
         watch_providers = watch_data.get("providers", [])
-        st.write("DEBUG WATCH:", watch_data)
+        
 
         if watch_link and watch_providers:
 
