@@ -7,8 +7,12 @@ import requests
 from dotenv import load_dotenv
 from functools import lru_cache
 load_dotenv()
+try:
+    import streamlit as st
+    TMDB_API_KEY = st.secrets.get("TMDB_API_KEY") or os.getenv("TMDB_API_KEY")
+except Exception:
+    TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 
-TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
 
 # =========================================================
