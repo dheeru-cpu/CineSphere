@@ -1,0 +1,7 @@
+streamlit==1.64.0
+pandas
+requests
+python-dotenv
+scikit-learn
+joblib
+scipy
